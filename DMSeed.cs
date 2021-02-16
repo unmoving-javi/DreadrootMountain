@@ -42,7 +42,7 @@ namespace XRL.World.Parts
 
         public DMSeed()
         {
-            this.growthTime = Stat.Roll(growthTimeRoll);
+            this.growthTime = Stat.Roll(GrowthTimeRoll);
         }
 
         public double timeUntilGrown()
