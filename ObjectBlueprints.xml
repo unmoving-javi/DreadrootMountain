@@ -28,11 +28,6 @@
     <part Name="Description" Short="Long, golden fronds unfurl when the desert wind moistens. Pieces of its bark, collated into tiny, interlocked plates, are chewed off." />
   </object>
 
-  <object Name="Ctesiphus" Load="Merge">
-    <part Name="Render" ColorString="&amp;B"></part>
-  </object>
-
-
   <object Name="Seed"  Inherits="Item">
     <part Name="Physics" Weight="0" Category="Seeds" Takeable="true" Solid="false"></part>
     <part Name="Render" DisplayName="seed" Tile="Creatures/sw_sowerseed.bmp" RenderString="." ColorString="&amp;K" DetailColor="r" Occluding="false"></part>
