@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+
+  <object Name="Domestic Dreadroot" Inherits="BasePlant">
+
+    <part Name="Render" Tile="Creatures/sw_dreadroot.bmp" RenderIfDark="true" DisplayName="domestic dreadroot" RenderString="231" ColorString="&amp;K" DetailColor="w" />
+    <part Name="Corpse" CorpseChance="30" CorpseBlueprint="Dreadroot Tuber" />
+    <stat Name="Hitpoints" Value="3" />
+    <part Name="Description" Short="Unlike its wild variety, this dreadroot does not hum." />
+    <part Name="Harvestable" OnSuccess="Dreadroot Tuber" StartRipeChance="1:10" RipeColor="&amp;w" RipeTileColor="&amp;K" RipeDetailColor="w" UnripeColor="&amp;K" UnripeTileColor="&amp;K" UnripeDetailColor="K" RegenTime="2d100+1200" RegenTimer="1200" />
+    <part Name="DMSeedDropper"></part>
+    <stag Name="Plank" Value="mass" />
+    <tag Name="ExcludeFromHostiles" />
+
+  </object>
+
+  <object Name="Domestic Lahbloom" Inherits="Plant">
+    <part Name="Render" DisplayName="domestic lahbloom" RenderString="12" ColorString="&amp;W" Tile="Terrain/sw_lahbloom.bmp" TileColor="&amp;W" DetailColor="w" Occluding="false" />
+    <part Name="Harvestable" OnSuccess="Lah Petals" StartRipeChance="1:5" RipeColor="&amp;r" RipeTileColor="&amp;r" RipeDetailColor="W" UnripeColor="&amp;W" UnripeTileColor="&amp;W" UnripeDetailColor="w" RegenTime="2d100+1200" RegenTimer="1200" />
+    <part Name="Description" Short="This meatlike flower awaits, unnervingly silent. It twitches periodically; perhaps it longs for the same violence seen by its feral counterparts." />
+    <part Name="DMSeedDropper"></part>
+
+  </object>
+
+  <object Name="Domestic Witchwood Tree" Inherits="Plant">
+    <part Name="Render" DisplayName="domestic witchwood tree" RenderString="157" ColorString="&amp;W" Tile="terrain/sw_talltree1.bmp" TileColor="&amp;W" DetailColor="g" Occluding="true" />
+    <part Name="Harvestable" OnSuccess="Witchwood Bark" StartRipeChance="1:75" RipeColor="&amp;r" RipeTileColor="&amp;W" RipeDetailColor="r" UnripeColor="&amp;W" UnripeTileColor="&amp;W" UnripeDetailColor="w" RegenTime="10d100+3600" RegenTimer="3600"/>
+    <part Name="Description" Short="Long, golden fronds unfurl when the desert wind moistens. Pieces of its bark, collated into tiny, interlocked plates, are chewed off." />
+  </object>
+
+  <object Name="Ctesiphus" Load="Merge">
+    <part Name="Render" ColorString="&amp;B"></part>
+  </object>
+
+
+  <object Name="Seed"  Inherits="Item">
+    <part Name="Physics" Weight="0" Category="Seeds" Takeable="true" Solid="false"></part>
+    <part Name="Render" DisplayName="seed" Tile="Creatures/sw_sowerseed.bmp" RenderString="." ColorString="&amp;K" DetailColor="r" Occluding="false"></part>
+    <part Name="Description" Short="A plant's seed. Perhaps this can be planted somewhere."></part>
+    <part Name="DMSeed" Result="Watervine" ResultName="Watervine"></part>
+    <part Name="Stacker" />
+    <part Name="Commerce" Value="0.25"/>
+  </object>
+
+
+  <object Name="Sowers_Seed" Load="Merge">
+    <part Name="DMSeed" Result="Feral Lah" ResultName="Feral Lah"></part>
+  </object>
+
+  <object Name="Feral Lah" Load="Merge">
+    <part Name="DMSeedDropper" Chance="4" Seed="Sowers_Seed"></part>
+  </object>
+
+  <object Name="Plant" Load="Merge">
+    <part Name="DMSeedDropper"></part>
+  </object>
+
+  <object Name="MutatedPlant" Load="Merge">
+    <part Name="DMSeedDropper" Chance = "10"></part>
+  </object>
+
+  <object Name="Dreadroot" Load="Merge">
+    <part Name="DMSeedDropper" hasDomestic = "true"></part>
+  </object>
+
+  <object Name="Lahbloom" Load="Merge">
+    <part Name="DMSeedDropper" hasDomestic = "true"></part>
+  </object>
+
+  <object Name="Witchwood Tree" Load="Merge">
+    <part Name="DMSeedDropper" hasDomestic = "true"></part>
+  </object>
+
+
+
+
+</objects>

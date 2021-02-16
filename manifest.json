@@ -1,0 +1,10 @@
+{
+	"id": "DreadrootMountain",
+	"loadorder": -1,
+	"title": "{{brown|Dreadroot Mountain}}",
+	"description": "Basic farming mod.",
+	"tags": "Farming",
+	"version": "0.1",
+	"author": "UnmovingJaveline",
+	"previewImage": "preview.png"
+}
