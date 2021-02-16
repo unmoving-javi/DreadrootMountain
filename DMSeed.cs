@@ -25,13 +25,12 @@ namespace XRL.World.Parts
         public string Result;
         public long growth = 0;
 
-        public int health = 0;
-
         public long lastseen = 0;
 
         public bool planted = false;
 
-        public int growthTime = 1200;
+        public string GrowthTimeRoll = "2d240 + 1200";
+        public int growthTime;
 
 
         public bool Dead = false;
@@ -43,7 +42,7 @@ namespace XRL.World.Parts
 
         public DMSeed()
         {
-
+            this.growthTime = Stat.Roll(growthTimeRoll);
         }
 
         public double timeUntilGrown()
